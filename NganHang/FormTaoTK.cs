@@ -25,6 +25,9 @@ namespace NganHang
             }
         }
 
-        
+        private void btnTaoTK_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

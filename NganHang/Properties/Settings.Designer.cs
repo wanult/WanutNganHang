@@ -26,7 +26,7 @@ namespace NganHang.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CHN;Initial Catalog=NGANHANG;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PHUONG_HUE\\PH_SV;Initial Catalog=NGANHANG;User ID=sa;Password=123")]
         public string NGANHANG_MASTER_ConnectionString {
             get {
                 return ((string)(this["NGANHANG_MASTER_ConnectionString"]));
@@ -36,8 +36,8 @@ namespace NganHang.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CHN\\MSSQLSERVER_01;Initial Catalog=NGANHANG;Persist Security Info=Tru" +
-            "e;User ID=sa;Password=nhunhunhu")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PHUONG_HUE\\PH_SV1;Initial Catalog=NGANHANG;Persist Security Info=True" +
+            ";User ID=sa;Password=123")]
         public string NGANHANGConnectionString {
             get {
                 return ((string)(this["NGANHANGConnectionString"]));
@@ -47,7 +47,7 @@ namespace NganHang.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CHN;Initial Catalog=NGANHANG;User ID=sa;Password=nhunhunhu")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PHUONG_HUE\\PH_SV;Initial Catalog=NGANHANG;User ID=sa;Password=123")]
         public string NGANHANGConnectionString1 {
             get {
                 return ((string)(this["NGANHANGConnectionString1"]));
@@ -57,8 +57,8 @@ namespace NganHang.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CHN\\MSSQLSERVER_03;Initial Catalog=NGANHANG;Persist Security Info=Tru" +
-            "e;User ID=sa;Password=nhunhunhu")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PHUONG_HUE\\PH_SV3;Initial Catalog=NGANHANG;Persist Security Info=True" +
+            ";User ID=sa;Password=123")]
         public string NGANHANGConnectionStringTTKH {
             get {
                 return ((string)(this["NGANHANGConnectionStringTTKH"]));

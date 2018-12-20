@@ -95,43 +95,52 @@ namespace NganHang
             btnsuaa.Visible = false;
             btnokk.Visible = false;
             btnhuyy.Visible = false;
-            groupBox1.Enabled = false;
+            groupBox1.Enabled = true;
         }
 
         private void cbxCN_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (this.cbxCN.ValueMember != "")
+            try
             {
-                if (Program.server != this.cbxCN.SelectedValue.ToString())
+                if (this.cbxCN.ValueMember != "")
                 {
-                    Program.server = this.cbxCN.SelectedValue.ToString();
+                    if (Program.server != this.cbxCN.SelectedValue.ToString())
+                    {
+                        Program.server = this.cbxCN.SelectedValue.ToString();
 
-                }
-                if (this.cbxCN.SelectedIndex != Program.mChinhanh)
-                {
-                    Program.loginHienTai = Program.remoteLogin;
-                    Program.passHienTai = Program.remotePassword;
-                }
-                else
-                {
-                    Program.loginHienTai = Program.loginName;
-                    Program.passHienTai = Program.passWord;
-                }
-                if (Program.KetNoi() == 0)
-                {
-                    MessageBox.Show("Không thể kết nối", "Lỗi kết nối", MessageBoxButtons.OK);
-                    return;
-                }
-                else
-                {
-                    this.khachHangTableAdapter.Connection.ConnectionString = Program.connectionString;
-                    this.khachHangTableAdapter.Fill(this.dS.KhachHang);
+                    }
+                    if (this.cbxCN.SelectedIndex != Program.mChinhanh)
+                    {
+                        Program.loginHienTai = Program.remoteLogin;
+                        Program.passHienTai = Program.remotePassword;
+                    }
+                    else
+                    {
+                        Program.loginHienTai = Program.loginName;
+                        Program.passHienTai = Program.passWord;
+                    }
+                    if (Program.KetNoi() == 0)
+                    {
+                        MessageBox.Show("Không thể kết nối", "Lỗi kết nối", MessageBoxButtons.OK);
+                        return;
+                    }
+                    else
+                    {
+                        this.khachHangTableAdapter.Connection.ConnectionString = Program.connectionString;
+                        this.khachHangTableAdapter.Fill(this.dS.KhachHang);
 
-                    //this.v_DSTKTableAdapter.Connection.ConnectionString = Program.connectionString;
-                    //this.v_DSTKTableAdapter.Fill(this.dSLG.V_DSTK);
+                        //this.v_DSTKTableAdapter.Connection.ConnectionString = Program.connectionString;
+                        //this.v_DSTKTableAdapter.Fill(this.dSLG.V_DSTK);
 
+                    }
                 }
             }
+            catch (NullReferenceException nullex)
+            {
+
+            }
+
+
         }
 
         private void btnsua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -172,6 +181,7 @@ namespace NganHang
                 taiKhoanBindingSource.EndEdit();
                 this.khachHangTableAdapter.Update(this.dS.KhachHang);
                 this.taiKhoanTableAdapter.Update(this.dS.TaiKhoan);
+                this.khachHangTableAdapter.Fill(this.dS.KhachHang);
                 ttxtk.Visible = false;
 
 
@@ -212,6 +222,19 @@ namespace NganHang
             formTaoTK.Chinhanh = macntk.Text;
         }
 
-        
+        private void cmndtk_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hotbx_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

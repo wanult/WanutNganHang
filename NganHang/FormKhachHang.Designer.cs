@@ -126,7 +126,7 @@
             // 
             cMNDLabel.AutoSize = true;
             cMNDLabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cMNDLabel.Location = new System.Drawing.Point(6, 31);
+            cMNDLabel.Location = new System.Drawing.Point(6, 29);
             cMNDLabel.Name = "cMNDLabel";
             cMNDLabel.Size = new System.Drawing.Size(42, 14);
             cMNDLabel.TabIndex = 0;
@@ -136,7 +136,7 @@
             // 
             hOLabel.AutoSize = true;
             hOLabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            hOLabel.Location = new System.Drawing.Point(24, 62);
+            hOLabel.Location = new System.Drawing.Point(24, 58);
             hOLabel.Name = "hOLabel";
             hOLabel.Size = new System.Drawing.Size(25, 14);
             hOLabel.TabIndex = 2;
@@ -146,7 +146,7 @@
             // 
             tENLabel.AutoSize = true;
             tENLabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tENLabel.Location = new System.Drawing.Point(374, 68);
+            tENLabel.Location = new System.Drawing.Point(374, 63);
             tENLabel.Name = "tENLabel";
             tENLabel.Size = new System.Drawing.Size(30, 14);
             tENLabel.TabIndex = 4;
@@ -156,7 +156,7 @@
             // 
             pHAILabel.AutoSize = true;
             pHAILabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pHAILabel.Location = new System.Drawing.Point(374, 138);
+            pHAILabel.Location = new System.Drawing.Point(374, 128);
             pHAILabel.Name = "pHAILabel";
             pHAILabel.Size = new System.Drawing.Size(35, 14);
             pHAILabel.TabIndex = 6;
@@ -166,7 +166,7 @@
             // 
             dIACHILabel.AutoSize = true;
             dIACHILabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dIACHILabel.Location = new System.Drawing.Point(4, 99);
+            dIACHILabel.Location = new System.Drawing.Point(4, 92);
             dIACHILabel.Name = "dIACHILabel";
             dIACHILabel.Size = new System.Drawing.Size(46, 14);
             dIACHILabel.TabIndex = 8;
@@ -176,7 +176,7 @@
             // 
             sODTLabel.AutoSize = true;
             sODTLabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sODTLabel.Location = new System.Drawing.Point(366, 30);
+            sODTLabel.Location = new System.Drawing.Point(366, 28);
             sODTLabel.Name = "sODTLabel";
             sODTLabel.Size = new System.Drawing.Size(38, 14);
             sODTLabel.TabIndex = 10;
@@ -186,7 +186,7 @@
             // 
             mACNLabel.AutoSize = true;
             mACNLabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            mACNLabel.Location = new System.Drawing.Point(6, 134);
+            mACNLabel.Location = new System.Drawing.Point(6, 124);
             mACNLabel.Name = "mACNLabel";
             mACNLabel.Size = new System.Drawing.Size(43, 14);
             mACNLabel.TabIndex = 12;
@@ -196,7 +196,7 @@
             // 
             nGAYCAPLabel.AutoSize = true;
             nGAYCAPLabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nGAYCAPLabel.Location = new System.Drawing.Point(345, 107);
+            nGAYCAPLabel.Location = new System.Drawing.Point(345, 99);
             nGAYCAPLabel.Name = "nGAYCAPLabel";
             nGAYCAPLabel.Size = new System.Drawing.Size(62, 14);
             nGAYCAPLabel.TabIndex = 14;
@@ -206,7 +206,7 @@
             // 
             lbsotk.AutoSize = true;
             lbsotk.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lbsotk.Location = new System.Drawing.Point(659, 30);
+            lbsotk.Location = new System.Drawing.Point(659, 28);
             lbsotk.Name = "lbsotk";
             lbsotk.Size = new System.Drawing.Size(39, 14);
             lbsotk.TabIndex = 24;
@@ -216,7 +216,7 @@
             // 
             lbsodu.AutoSize = true;
             lbsodu.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lbsodu.Location = new System.Drawing.Point(659, 74);
+            lbsodu.Location = new System.Drawing.Point(659, 69);
             lbsodu.Name = "lbsodu";
             lbsodu.Size = new System.Drawing.Size(39, 14);
             lbsodu.TabIndex = 25;
@@ -226,7 +226,7 @@
             // 
             trangThaiXoaLabel.AutoSize = true;
             trangThaiXoaLabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            trangThaiXoaLabel.Location = new System.Drawing.Point(610, 110);
+            trangThaiXoaLabel.Location = new System.Drawing.Point(610, 102);
             trangThaiXoaLabel.Name = "trangThaiXoaLabel";
             trangThaiXoaLabel.Size = new System.Drawing.Size(90, 14);
             trangThaiXoaLabel.TabIndex = 31;
@@ -327,7 +327,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 527);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 489);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(883, 0);
             // 
@@ -337,7 +337,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 47);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 480);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 442);
             // 
             // barDockControlRight
             // 
@@ -345,7 +345,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(883, 47);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 480);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 442);
             // 
             // barButtonItem2
             // 
@@ -367,24 +367,24 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 47);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(883, 43);
+            this.panel1.Size = new System.Drawing.Size(883, 40);
             this.panel1.TabIndex = 4;
             // 
             // cbxCN
             // 
             this.cbxCN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCN.FormattingEnabled = true;
-            this.cbxCN.Location = new System.Drawing.Point(101, 8);
+            this.cbxCN.Location = new System.Drawing.Point(101, 7);
             this.cbxCN.Name = "cbxCN";
-            this.cbxCN.Size = new System.Drawing.Size(168, 22);
+            this.cbxCN.Size = new System.Drawing.Size(168, 21);
             this.cbxCN.TabIndex = 1;
             this.cbxCN.SelectedIndexChanged += new System.EventHandler(this.cbxCN_SelectedIndexChanged);
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(67, 125);
+            this.groupBox2.Location = new System.Drawing.Point(67, 116);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(168, 11);
+            this.groupBox2.Size = new System.Drawing.Size(168, 10);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
@@ -393,7 +393,7 @@
             // 
             this.lbcnhanh.AutoSize = true;
             this.lbcnhanh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbcnhanh.Location = new System.Drawing.Point(12, 9);
+            this.lbcnhanh.Location = new System.Drawing.Point(12, 8);
             this.lbcnhanh.Name = "lbcnhanh";
             this.lbcnhanh.Size = new System.Drawing.Size(74, 16);
             this.lbcnhanh.TabIndex = 0;
@@ -431,11 +431,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.khachHangGridControl.DataSource = this.bdsKH;
-            this.khachHangGridControl.Location = new System.Drawing.Point(0, 90);
+            this.khachHangGridControl.Location = new System.Drawing.Point(0, 84);
             this.khachHangGridControl.MainView = this.gridView1;
             this.khachHangGridControl.MenuManager = this.barManager1;
             this.khachHangGridControl.Name = "khachHangGridControl";
-            this.khachHangGridControl.Size = new System.Drawing.Size(883, 197);
+            this.khachHangGridControl.Size = new System.Drawing.Size(883, 183);
             this.khachHangGridControl.TabIndex = 9;
             this.khachHangGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -551,12 +551,13 @@
             this.groupBox1.Controls.Add(this.hotbx);
             this.groupBox1.Controls.Add(cMNDLabel);
             this.groupBox1.Controls.Add(this.cmndtbx);
-            this.groupBox1.Location = new System.Drawing.Point(0, 290);
+            this.groupBox1.Location = new System.Drawing.Point(0, 269);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(883, 238);
+            this.groupBox1.Size = new System.Drawing.Size(883, 221);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox3
             // 
@@ -565,9 +566,9 @@
             this.groupBox3.Controls.Add(this.btnsuaa);
             this.groupBox3.Controls.Add(this.btnokk);
             this.groupBox3.Controls.Add(this.btnxoaa);
-            this.groupBox3.Location = new System.Drawing.Point(212, 163);
+            this.groupBox3.Location = new System.Drawing.Point(212, 151);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(207, 75);
+            this.groupBox3.Size = new System.Drawing.Size(207, 70);
             this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
             // 
@@ -575,9 +576,9 @@
             // 
             this.btnhuyy.BackColor = System.Drawing.SystemColors.Control;
             this.btnhuyy.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnhuyy.Location = new System.Drawing.Point(105, 27);
+            this.btnhuyy.Location = new System.Drawing.Point(105, 25);
             this.btnhuyy.Name = "btnhuyy";
-            this.btnhuyy.Size = new System.Drawing.Size(85, 35);
+            this.btnhuyy.Size = new System.Drawing.Size(85, 32);
             this.btnhuyy.TabIndex = 3;
             this.btnhuyy.Text = "Hủy";
             this.btnhuyy.UseVisualStyleBackColor = false;
@@ -587,9 +588,9 @@
             // 
             this.btnsuaa.BackColor = System.Drawing.SystemColors.Control;
             this.btnsuaa.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsuaa.Location = new System.Drawing.Point(6, 27);
+            this.btnsuaa.Location = new System.Drawing.Point(6, 25);
             this.btnsuaa.Name = "btnsuaa";
-            this.btnsuaa.Size = new System.Drawing.Size(89, 35);
+            this.btnsuaa.Size = new System.Drawing.Size(89, 32);
             this.btnsuaa.TabIndex = 2;
             this.btnsuaa.Text = "Sửa";
             this.btnsuaa.UseVisualStyleBackColor = false;
@@ -599,9 +600,9 @@
             // 
             this.btnokk.BackColor = System.Drawing.SystemColors.Control;
             this.btnokk.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnokk.Location = new System.Drawing.Point(105, 14);
+            this.btnokk.Location = new System.Drawing.Point(105, 13);
             this.btnokk.Name = "btnokk";
-            this.btnokk.Size = new System.Drawing.Size(85, 34);
+            this.btnokk.Size = new System.Drawing.Size(85, 32);
             this.btnokk.TabIndex = 1;
             this.btnokk.Text = "OK";
             this.btnokk.UseVisualStyleBackColor = false;
@@ -611,9 +612,9 @@
             // 
             this.btnxoaa.BackColor = System.Drawing.SystemColors.Control;
             this.btnxoaa.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnxoaa.Location = new System.Drawing.Point(6, 14);
+            this.btnxoaa.Location = new System.Drawing.Point(6, 13);
             this.btnxoaa.Name = "btnxoaa";
-            this.btnxoaa.Size = new System.Drawing.Size(89, 34);
+            this.btnxoaa.Size = new System.Drawing.Size(89, 32);
             this.btnxoaa.TabIndex = 0;
             this.btnxoaa.Text = "Xóa";
             this.btnxoaa.UseVisualStyleBackColor = false;
@@ -622,7 +623,7 @@
             // ttxtk
             // 
             this.ttxtk.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.taiKhoanBindingSource, "TrangThaiXoa", true));
-            this.ttxtk.Location = new System.Drawing.Point(706, 107);
+            this.ttxtk.Location = new System.Drawing.Point(706, 99);
             this.ttxtk.Name = "ttxtk";
             this.ttxtk.Size = new System.Drawing.Size(121, 20);
             this.ttxtk.TabIndex = 33;
@@ -635,7 +636,7 @@
             // ttxoakh
             // 
             this.ttxoakh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "TrangThaiXoa", true));
-            this.ttxoakh.Location = new System.Drawing.Point(706, 107);
+            this.ttxoakh.Location = new System.Drawing.Point(706, 99);
             this.ttxoakh.Name = "ttxoakh";
             this.ttxoakh.Size = new System.Drawing.Size(121, 20);
             this.ttxoakh.TabIndex = 32;
@@ -643,7 +644,7 @@
             // sodutkkh
             // 
             this.sodutkkh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.taiKhoanBindingSource1, "SODU", true));
-            this.sodutkkh.Location = new System.Drawing.Point(706, 68);
+            this.sodutkkh.Location = new System.Drawing.Point(706, 63);
             this.sodutkkh.Name = "sodutkkh";
             this.sodutkkh.Size = new System.Drawing.Size(121, 20);
             this.sodutkkh.TabIndex = 31;
@@ -656,7 +657,7 @@
             // sotkkh
             // 
             this.sotkkh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.taiKhoanBindingSource1, "SOTK", true));
-            this.sotkkh.Location = new System.Drawing.Point(706, 27);
+            this.sotkkh.Location = new System.Drawing.Point(706, 25);
             this.sotkkh.Name = "sotkkh";
             this.sotkkh.Size = new System.Drawing.Size(121, 20);
             this.sotkkh.TabIndex = 30;
@@ -664,7 +665,7 @@
             // macntk
             // 
             this.macntk.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.taiKhoanBindingSource, "MACN", true));
-            this.macntk.Location = new System.Drawing.Point(64, 130);
+            this.macntk.Location = new System.Drawing.Point(64, 121);
             this.macntk.Name = "macntk";
             this.macntk.Size = new System.Drawing.Size(183, 20);
             this.macntk.TabIndex = 29;
@@ -672,16 +673,17 @@
             // cmndtk
             // 
             this.cmndtk.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.taiKhoanBindingSource, "CMND", true));
-            this.cmndtk.Location = new System.Drawing.Point(64, 31);
+            this.cmndtk.Location = new System.Drawing.Point(64, 29);
             this.cmndtk.Name = "cmndtk";
             this.cmndtk.Size = new System.Drawing.Size(183, 20);
             this.cmndtk.TabIndex = 28;
             this.cmndtk.Visible = false;
+            this.cmndtk.TextChanged += new System.EventHandler(this.cmndtk_TextChanged);
             // 
             // sodutk
             // 
             this.sodutk.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.taiKhoanBindingSource, "SODU", true));
-            this.sodutk.Location = new System.Drawing.Point(706, 68);
+            this.sodutk.Location = new System.Drawing.Point(706, 63);
             this.sodutk.Name = "sodutk";
             this.sodutk.Size = new System.Drawing.Size(121, 20);
             this.sodutk.TabIndex = 26;
@@ -690,7 +692,7 @@
             // sotktbx
             // 
             this.sotktbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.taiKhoanBindingSource, "SOTK", true));
-            this.sotktbx.Location = new System.Drawing.Point(706, 27);
+            this.sotktbx.Location = new System.Drawing.Point(706, 25);
             this.sotktbx.Name = "sotktbx";
             this.sotktbx.Size = new System.Drawing.Size(121, 20);
             this.sotktbx.TabIndex = 25;
@@ -698,7 +700,7 @@
             // nGAYCAPDateTimePicker
             // 
             this.nGAYCAPDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bdsKH, "NGAYCAP", true));
-            this.nGAYCAPDateTimePicker.Location = new System.Drawing.Point(421, 99);
+            this.nGAYCAPDateTimePicker.Location = new System.Drawing.Point(421, 92);
             this.nGAYCAPDateTimePicker.Name = "nGAYCAPDateTimePicker";
             this.nGAYCAPDateTimePicker.Size = new System.Drawing.Size(183, 20);
             this.nGAYCAPDateTimePicker.TabIndex = 24;
@@ -706,7 +708,7 @@
             // macntbx
             // 
             this.macntbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "MACN", true));
-            this.macntbx.Location = new System.Drawing.Point(64, 130);
+            this.macntbx.Location = new System.Drawing.Point(64, 121);
             this.macntbx.Name = "macntbx";
             this.macntbx.Size = new System.Drawing.Size(183, 20);
             this.macntbx.TabIndex = 13;
@@ -714,7 +716,7 @@
             // sdttbx
             // 
             this.sdttbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "SODT", true));
-            this.sdttbx.Location = new System.Drawing.Point(421, 27);
+            this.sdttbx.Location = new System.Drawing.Point(421, 25);
             this.sdttbx.Name = "sdttbx";
             this.sdttbx.Size = new System.Drawing.Size(183, 20);
             this.sdttbx.TabIndex = 11;
@@ -722,9 +724,9 @@
             // diachitbx
             // 
             this.diachitbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "DIACHI", true));
-            this.diachitbx.Location = new System.Drawing.Point(64, 96);
+            this.diachitbx.Location = new System.Drawing.Point(64, 89);
             this.diachitbx.Name = "diachitbx";
-            this.diachitbx.Size = new System.Drawing.Size(256, 20);
+            this.diachitbx.Size = new System.Drawing.Size(183, 20);
             this.diachitbx.TabIndex = 9;
             // 
             // phaicbx
@@ -734,15 +736,15 @@
             this.phaicbx.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.phaicbx.Location = new System.Drawing.Point(421, 135);
+            this.phaicbx.Location = new System.Drawing.Point(421, 125);
             this.phaicbx.Name = "phaicbx";
-            this.phaicbx.Size = new System.Drawing.Size(183, 22);
+            this.phaicbx.Size = new System.Drawing.Size(183, 21);
             this.phaicbx.TabIndex = 7;
             // 
             // tentbx
             // 
             this.tentbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "TEN", true));
-            this.tentbx.Location = new System.Drawing.Point(421, 66);
+            this.tentbx.Location = new System.Drawing.Point(421, 61);
             this.tentbx.Name = "tentbx";
             this.tentbx.Size = new System.Drawing.Size(183, 20);
             this.tentbx.TabIndex = 5;
@@ -750,15 +752,16 @@
             // hotbx
             // 
             this.hotbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "HO", true));
-            this.hotbx.Location = new System.Drawing.Point(64, 59);
+            this.hotbx.Location = new System.Drawing.Point(64, 55);
             this.hotbx.Name = "hotbx";
             this.hotbx.Size = new System.Drawing.Size(183, 20);
             this.hotbx.TabIndex = 3;
+            this.hotbx.TextChanged += new System.EventHandler(this.hotbx_TextChanged);
             // 
             // cmndtbx
             // 
             this.cmndtbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKH, "CMND", true));
-            this.cmndtbx.Location = new System.Drawing.Point(64, 31);
+            this.cmndtbx.Location = new System.Drawing.Point(64, 29);
             this.cmndtbx.Name = "cmndtbx";
             this.cmndtbx.Size = new System.Drawing.Size(183, 20);
             this.cmndtbx.TabIndex = 1;
@@ -769,9 +772,9 @@
             // 
             // FormKhachHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 527);
+            this.ClientSize = new System.Drawing.Size(883, 489);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.khachHangGridControl);
             this.Controls.Add(this.panel1);

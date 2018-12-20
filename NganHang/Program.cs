@@ -35,7 +35,7 @@ namespace NganHang
         public static string loginHienTai = "";
         public static string passHienTai = "";
 
-        public static string remoteLogin = "HTKNNH";
+        public static string remoteLogin = "HTKN";
         public static string remotePassword = "123";
         public static string hoTen = "";
         public static string maNV="" ;
@@ -66,7 +66,7 @@ namespace NganHang
 
                 Program.connectionString = "Data Source=" + Program.server + ";Initial Catalog=" + Program.database + ";User ID=" +
                       Program.loginHienTai + ";password=" + Program.passHienTai;
-                Program.connectionStringTTKH = $"Data Source=CHN\\MSSQLSERVER_03; Initial Catalog={Program.database};User ID={Program.loginHienTai}; password={Program.passHienTai};";
+                Program.connectionStringTTKH = $"Data Source=PHUONG_HUE\\PH_SV3; Initial Catalog={Program.database};User ID={Program.loginHienTai}; password={Program.passHienTai};";
                 sqlConnection = new SqlConnection(connectionString);
                 sqlConnectionTTKH = new SqlConnection(connectionStringTTKH);
                 Program.sqlConnection.ConnectionString = Program.connectionString;

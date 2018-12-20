@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSLG" targetNamespace="http://tempuri.org/DSLG.xsd" xmlns:mstns="http://tempuri.org/DSLG.xsd" xmlns="http://tempuri.org/DSLG.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="NGANHANGConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="NGANHANGConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.NganHang.Properties.Settings.GlobalReference.Default.NGANHANGConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_DSNHOMTableAdapter" GeneratorDataComponentClassName="V_DSNHOMTableAdapter" Name="V_DSNHOM" UserDataComponentName="V_DSNHOMTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NGANHANGConnectionString (Settings)" DbObjectName="NGANHANG.dbo.V_DSNHOM" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT name FROM dbo.V_DSNHOM</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_DSTKTableAdapter" GeneratorDataComponentClassName="V_DSTKTableAdapter" Name="V_DSTK" UserDataComponentName="V_DSTKTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NGANHANGConnectionString (Settings)" DbObjectName="NGANHANG.dbo.V_DSTK" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MANV FROM dbo.V_DSTK</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MANV" DataSetColumn="MANV" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSLG" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DSLG" msprop:Generator_UserDSName="DSLG">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_DSNHOM" msprop:Generator_TableClassName="V_DSNHOMDataTable" msprop:Generator_TableVarName="tableV_DSNHOM" msprop:Generator_TablePropName="V_DSNHOM" msprop:Generator_RowDeletingName="V_DSNHOMRowDeleting" msprop:Generator_RowChangingName="V_DSNHOMRowChanging" msprop:Generator_RowEvHandlerName="V_DSNHOMRowChangeEventHandler" msprop:Generator_RowDeletedName="V_DSNHOMRowDeleted" msprop:Generator_UserTableName="V_DSNHOM" msprop:Generator_RowChangedName="V_DSNHOMRowChanged" msprop:Generator_RowEvArgName="V_DSNHOMRowChangeEvent" msprop:Generator_RowClassName="V_DSNHOMRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="V_DSTK" msprop:Generator_TableClassName="V_DSTKDataTable" msprop:Generator_TableVarName="tableV_DSTK" msprop:Generator_TablePropName="V_DSTK" msprop:Generator_RowDeletingName="V_DSTKRowDeleting" msprop:Generator_RowChangingName="V_DSTKRowChanging" msprop:Generator_RowEvHandlerName="V_DSTKRowChangeEventHandler" msprop:Generator_RowDeletedName="V_DSTKRowDeleted" msprop:Generator_UserTableName="V_DSTK" msprop:Generator_RowChangedName="V_DSTKRowChanged" msprop:Generator_RowEvArgName="V_DSTKRowChangeEvent" msprop:Generator_RowClassName="V_DSTKRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MANV" msprop:Generator_ColumnVarNameInTable="columnMANV" msprop:Generator_ColumnPropNameInRow="MANV" msprop:Generator_ColumnPropNameInTable="MANVColumn" msprop:Generator_UserColumnName="MANV">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:V_DSTK" />
+      <xs:field xpath="mstns:MANV" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

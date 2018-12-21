@@ -122,6 +122,7 @@
             this.loginname.Name = "loginname";
             this.loginname.Size = new System.Drawing.Size(202, 27);
             this.loginname.TabIndex = 5;
+            this.loginname.Text = "DT";
             // 
             // Password
             // 
@@ -131,6 +132,7 @@
             this.Password.PasswordChar = '*';
             this.Password.Size = new System.Drawing.Size(202, 27);
             this.Password.TabIndex = 6;
+            this.Password.Text = "123";
             // 
             // button1
             // 

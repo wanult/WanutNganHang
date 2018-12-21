@@ -97,7 +97,7 @@ namespace NganHang
             catch (SqlException ex)
             {
                 Program.sqlConnection.Close();
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Lỗi: "+ex.Message);
                 return null;
             }
         }

@@ -136,38 +136,44 @@ namespace NganHang
 
         private void comboBoxCN_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            if (this.comboBoxCN.ValueMember != "")
+            try
             {
-                if (Program.server != this.comboBoxCN.SelectedValue.ToString())
+                if (this.comboBoxCN.ValueMember != "")
                 {
-                    Program.server = this.comboBoxCN.SelectedValue.ToString();
+                    if (Program.server != this.comboBoxCN.SelectedValue.ToString())
+                    {
+                        Program.server = this.comboBoxCN.SelectedValue.ToString();
 
-                }
-                if (this.comboBoxCN.SelectedIndex != Program.mChinhanh)
-                {
-                    Program.loginHienTai = Program.remoteLogin;
-                    Program.passHienTai = Program.remotePassword;
-                }
-                else
-                {
-                    Program.loginHienTai = Program.loginName;
-                    Program.passHienTai = Program.passWord;
-                }
-                if (Program.KetNoi() == 0)
-                {
-                    MessageBox.Show("Không thể kết nối", "Lỗi kết nối", MessageBoxButtons.OK);
-                    return;
-                }
-                else
-                {
-                    this.nhanVienTableAdapter.Connection.ConnectionString = Program.connectionString;
-                    this.nhanVienTableAdapter.Fill(this.dS.NhanVien);
+                    }
+                    if (this.comboBoxCN.SelectedIndex != Program.mChinhanh)
+                    {
+                        Program.loginHienTai = Program.remoteLogin;
+                        Program.passHienTai = Program.remotePassword;
+                    }
+                    else
+                    {
+                        Program.loginHienTai = Program.loginName;
+                        Program.passHienTai = Program.passWord;
+                    }
+                    if (Program.KetNoi() == 0)
+                    {
+                        MessageBox.Show("Không thể kết nối", "Lỗi kết nối", MessageBoxButtons.OK);
+                        return;
+                    }
+                    else
+                    {
+                        this.nhanVienTableAdapter.Connection.ConnectionString = Program.connectionString;
+                        this.nhanVienTableAdapter.Fill(this.dS.NhanVien);
 
-                    this.v_DSTKTableAdapter.Connection.ConnectionString = Program.connectionString;
-                    this.v_DSTKTableAdapter.Fill(this.dSLG.V_DSTK);
+                        this.v_DSTKTableAdapter.Connection.ConnectionString = Program.connectionString;
+                        this.v_DSTKTableAdapter.Fill(this.dSLG.V_DSTK);
 
+                    }
                 }
+            }
+            catch (NullReferenceException)
+            {
+
             }
         }
 

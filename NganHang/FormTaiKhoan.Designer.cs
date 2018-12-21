@@ -66,7 +66,7 @@
             // sOTKLabel
             // 
             sOTKLabel.AutoSize = true;
-            sOTKLabel.Location = new System.Drawing.Point(40, 54);
+            sOTKLabel.Location = new System.Drawing.Point(32, 30);
             sOTKLabel.Name = "sOTKLabel";
             sOTKLabel.Size = new System.Drawing.Size(38, 14);
             sOTKLabel.TabIndex = 0;
@@ -75,7 +75,7 @@
             // cMNDLabel
             // 
             cMNDLabel.AutoSize = true;
-            cMNDLabel.Location = new System.Drawing.Point(40, 105);
+            cMNDLabel.Location = new System.Drawing.Point(32, 81);
             cMNDLabel.Name = "cMNDLabel";
             cMNDLabel.Size = new System.Drawing.Size(39, 14);
             cMNDLabel.TabIndex = 2;
@@ -84,7 +84,7 @@
             // sODULabel
             // 
             sODULabel.AutoSize = true;
-            sODULabel.Location = new System.Drawing.Point(268, 54);
+            sODULabel.Location = new System.Drawing.Point(260, 30);
             sODULabel.Name = "sODULabel";
             sODULabel.Size = new System.Drawing.Size(39, 14);
             sODULabel.TabIndex = 4;
@@ -93,7 +93,7 @@
             // mACNLabel
             // 
             mACNLabel.AutoSize = true;
-            mACNLabel.Location = new System.Drawing.Point(268, 105);
+            mACNLabel.Location = new System.Drawing.Point(260, 81);
             mACNLabel.Name = "mACNLabel";
             mACNLabel.Size = new System.Drawing.Size(40, 14);
             mACNLabel.TabIndex = 6;
@@ -101,27 +101,29 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panel1.Controls.Add(this.cbxCNTK);
             this.panel1.Controls.Add(this.cnkh);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 54);
+            this.panel1.Size = new System.Drawing.Size(800, 40);
             this.panel1.TabIndex = 0;
             // 
             // cbxCNTK
             // 
+            this.cbxCNTK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCNTK.FormattingEnabled = true;
-            this.cbxCNTK.Location = new System.Drawing.Point(97, 17);
+            this.cbxCNTK.Location = new System.Drawing.Point(74, 10);
             this.cbxCNTK.Name = "cbxCNTK";
-            this.cbxCNTK.Size = new System.Drawing.Size(134, 22);
+            this.cbxCNTK.Size = new System.Drawing.Size(164, 22);
             this.cbxCNTK.TabIndex = 2;
             this.cbxCNTK.SelectedIndexChanged += new System.EventHandler(this.cbxCNTK_SelectedIndexChanged);
             // 
             // cnkh
             // 
             this.cnkh.AutoSize = true;
-            this.cnkh.Location = new System.Drawing.Point(13, 17);
+            this.cnkh.Location = new System.Drawing.Point(12, 13);
             this.cnkh.Name = "cnkh";
             this.cnkh.Size = new System.Drawing.Size(56, 14);
             this.cnkh.TabIndex = 0;
@@ -137,6 +139,7 @@
             // 
             this.bdsTK.DataMember = "TaiKhoan";
             this.bdsTK.DataSource = this.dS;
+            this.bdsTK.Filter = "TrangThaiXoa = 1";
             // 
             // taiKhoanTableAdapter
             // 
@@ -155,12 +158,14 @@
             // 
             // taiKhoanGridControl
             // 
+            this.taiKhoanGridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.taiKhoanGridControl.DataSource = this.bdsTK;
-            this.taiKhoanGridControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.taiKhoanGridControl.Location = new System.Drawing.Point(0, 54);
+            this.taiKhoanGridControl.Location = new System.Drawing.Point(0, 39);
             this.taiKhoanGridControl.MainView = this.gridView1;
             this.taiKhoanGridControl.Name = "taiKhoanGridControl";
-            this.taiKhoanGridControl.Size = new System.Drawing.Size(800, 154);
+            this.taiKhoanGridControl.Size = new System.Drawing.Size(800, 290);
             this.taiKhoanGridControl.TabIndex = 2;
             this.taiKhoanGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -217,17 +222,17 @@
             this.groupBoxTK.Controls.Add(this.cmndtk);
             this.groupBoxTK.Controls.Add(sOTKLabel);
             this.groupBoxTK.Controls.Add(this.stk);
-            this.groupBoxTK.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBoxTK.Location = new System.Drawing.Point(0, 208);
+            this.groupBoxTK.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBoxTK.Location = new System.Drawing.Point(0, 335);
             this.groupBoxTK.Name = "groupBoxTK";
-            this.groupBoxTK.Size = new System.Drawing.Size(800, 199);
+            this.groupBoxTK.Size = new System.Drawing.Size(800, 115);
             this.groupBoxTK.TabIndex = 3;
             this.groupBoxTK.TabStop = false;
             // 
             // cntk
             // 
             this.cntk.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "MACN", true));
-            this.cntk.Location = new System.Drawing.Point(314, 102);
+            this.cntk.Location = new System.Drawing.Point(306, 78);
             this.cntk.Name = "cntk";
             this.cntk.Size = new System.Drawing.Size(141, 20);
             this.cntk.TabIndex = 7;
@@ -235,7 +240,7 @@
             // sdtk
             // 
             this.sdtk.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "SODU", true));
-            this.sdtk.Location = new System.Drawing.Point(313, 51);
+            this.sdtk.Location = new System.Drawing.Point(305, 27);
             this.sdtk.Name = "sdtk";
             this.sdtk.Size = new System.Drawing.Size(142, 20);
             this.sdtk.TabIndex = 5;
@@ -243,7 +248,7 @@
             // cmndtk
             // 
             this.cmndtk.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "CMND", true));
-            this.cmndtk.Location = new System.Drawing.Point(85, 102);
+            this.cmndtk.Location = new System.Drawing.Point(77, 78);
             this.cmndtk.Name = "cmndtk";
             this.cmndtk.Size = new System.Drawing.Size(146, 20);
             this.cmndtk.TabIndex = 3;
@@ -251,7 +256,7 @@
             // stk
             // 
             this.stk.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTK, "SOTK", true));
-            this.stk.Location = new System.Drawing.Point(84, 51);
+            this.stk.Location = new System.Drawing.Point(76, 27);
             this.stk.Name = "stk";
             this.stk.Size = new System.Drawing.Size(147, 20);
             this.stk.TabIndex = 1;
@@ -265,7 +270,7 @@
             this.Controls.Add(this.taiKhoanGridControl);
             this.Controls.Add(this.panel1);
             this.Name = "FormTaiKhoan";
-            this.Text = "FormTaiKhoan";
+            this.Text = "Quản lý tài khoản";
             this.Load += new System.EventHandler(this.FormTaiKhoan_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

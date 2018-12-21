@@ -34,6 +34,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.btGD = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbstk
@@ -85,11 +86,21 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 5;
             // 
+            // btGD
+            // 
+            this.btGD.Location = new System.Drawing.Point(158, 215);
+            this.btGD.Name = "btGD";
+            this.btGD.Size = new System.Drawing.Size(75, 23);
+            this.btGD.TabIndex = 6;
+            this.btGD.Text = "OK";
+            this.btGD.UseVisualStyleBackColor = true;
+            // 
             // FormGD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(617, 450);
+            this.ClientSize = new System.Drawing.Size(507, 346);
+            this.Controls.Add(this.btGD);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox1);
@@ -112,5 +123,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button btGD;
     }
 }

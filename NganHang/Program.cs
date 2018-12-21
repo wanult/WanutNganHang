@@ -18,7 +18,7 @@ namespace NganHang
         public static FromDangNhap formDangNhap;
         public static FormKhachHang formKhachHang;
         public static FormGiaoDich formGiaoDich;
-        public static FormTTKH formTTKH;
+        //public static FormTTKH formTTKH;
         public static FormTKTK formTKTK;
         public static FormBaoCao formBaoCao;
         public static FormGD formGD;

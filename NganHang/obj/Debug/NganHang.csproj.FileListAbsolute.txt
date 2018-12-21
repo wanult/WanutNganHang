@@ -578,3 +578,8 @@ D:\HOC_TAP\CSDLPT\D15CQMT\NganHang3\NganHang\NganHang\NganHang\obj\Debug\NganHan
 D:\HOC_TAP\CSDLPT\D15CQMT\NganHang3\NganHang\NganHang\NganHang\obj\Debug\NganHang.FormBaoCao.resources
 D:\HOC_TAP\CSDLPT\D15CQMT\NganHang3\NganHang\NganHang\NganHang\obj\Debug\NganHang.FormGD.resources
 D:\HOC_TAP\CSDLPT\D15CQMT\NganHang3\NganHang\NganHang\NganHang\obj\Debug\NganHang.FormTKTK.resources
+D:\HOC_TAP\CSDLPT\D15CQMT\NganHang3\NganHang\NganHang\NganHang\obj\Debug\NganHang.UserControlGD.resources
+D:\HOC_TAP\CSDLPT\D15CQMT\NganHang3\NganHang\NganHang\NganHang\obj\Debug\NganHang.XtraReportGD.resources
+D:\HOC_TAP\CSDLPT\D15CQMT\NganHang3\NganHang\NganHang\NganHang\obj\Debug\NganHang.XtraReportLKTK.resources
+D:\HOC_TAP\CSDLPT\D15CQMT\NganHang3\NganHang\NganHang\NganHang\obj\Debug\NganHang.XtraReportKH.resources
+D:\HOC_TAP\CSDLPT\D15CQMT\NganHang3\NganHang\NganHang\NganHang\obj\Debug\NganHang.FormTaoLogin.resources

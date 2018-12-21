@@ -31,7 +31,6 @@ namespace NganHang
             mACNTextBox.Enabled = false;
             btnhuy.Visible = false;
             btnEdit.Visible = false;
-            btnxoa.Visible = false;
             btnok.Visible = true;
         }
 
@@ -71,25 +70,24 @@ namespace NganHang
                 comboBoxCN.Enabled = false;
             }
             groupBox1.Enabled = false;
-            btnxoa.Visible = false;
             btnEdit.Visible = false;
             btnhuy.Visible = false;
             btnok.Visible = false;
         }
 
         private void hOLabel_Click(object sender, EventArgs e)
-        {this.btnxoa.Visible = false;
+        {
             this.btnEdit.Visible = false;
             this.btnhuy.Visible = false;
             this.btnok.Visible = false;
             mANVTextBox.Enabled = false;
             groupBox1.Enabled = false;
-           
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             if (mACNTextBox.Text.Equals("") || hOTextBox.Text.Equals(""))
             {
                 MessageBox.Show("Không hợp lệ! Vui lòng kiểm tra lại!");
@@ -132,43 +130,54 @@ namespace NganHang
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             this.nhanVienTableAdapter.Fill(this.dS.NhanVien);
+            groupBox1.Enabled = false;
+            btnEdit.Visible = false;
+            btnhuy.Visible = false;
+            btnok.Visible = false;
         }
 
         private void comboBoxCN_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            if (this.comboBoxCN.ValueMember != "")
+            try
             {
-                if (Program.server != this.comboBoxCN.SelectedValue.ToString())
+                if (this.comboBoxCN.ValueMember != "")
                 {
-                    Program.server = this.comboBoxCN.SelectedValue.ToString();
+                    if (Program.server != this.comboBoxCN.SelectedValue.ToString())
+                    {
+                        Program.server = this.comboBoxCN.SelectedValue.ToString();
 
-                }
-                if (this.comboBoxCN.SelectedIndex != Program.mChinhanh)
-                {
-                    Program.loginHienTai = Program.remoteLogin;
-                    Program.passHienTai = Program.remotePassword;
-                }
-                else
-                {
-                    Program.loginHienTai = Program.loginName;
-                    Program.passHienTai = Program.passWord;
-                }
-                if (Program.KetNoi() == 0)
-                {
-                    MessageBox.Show("Không thể kết nối", "Lỗi kết nối", MessageBoxButtons.OK);
-                    return;
-                }
-                else
-                {
-                    this.nhanVienTableAdapter.Connection.ConnectionString = Program.connectionString;
-                    this.nhanVienTableAdapter.Fill(this.dS.NhanVien);
+                    }
+                    if (this.comboBoxCN.SelectedIndex != Program.mChinhanh)
+                    {
+                        Program.loginHienTai = Program.remoteLogin;
+                        Program.passHienTai = Program.remotePassword;
+                    }
+                    else
+                    {
+                        Program.loginHienTai = Program.loginName;
+                        Program.passHienTai = Program.passWord;
+                    }
+                    if (Program.KetNoi() == 0)
+                    {
+                        MessageBox.Show("Không thể kết nối", "Lỗi kết nối", MessageBoxButtons.OK);
+                        return;
+                    }
+                    else
+                    {
+                        this.nhanVienTableAdapter.Connection.ConnectionString = Program.connectionString;
+                        this.nhanVienTableAdapter.Fill(this.dS.NhanVien);
 
-                    this.v_DSTKTableAdapter.Connection.ConnectionString = Program.connectionString;
-                    this.v_DSTKTableAdapter.Fill(this.dSLG.V_DSTK);
+                        this.v_DSTKTableAdapter.Connection.ConnectionString = Program.connectionString;
+                        this.v_DSTKTableAdapter.Fill(this.dSLG.V_DSTK);
 
+                    }
                 }
             }
+            catch (NullReferenceException)
+            {
+
+            }
+
         }
 
         private void Cancle_Click(object sender, EventArgs e)
@@ -179,11 +188,29 @@ namespace NganHang
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            btnxoa.Visible = true;
             btnEdit.Visible = false;
             btnok.Visible = false;
             btnhuy.Visible = false;
             groupBox1.Enabled = false;
+            DialogResult dialogResult = MessageBox.Show("Ban co chac xoa nhan vien nay khong?", "Thong bao", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+            else
+            {
+
+                trangThaiXoaTextBox.Text = "0";
+                bdsNV.EndEdit();
+                this.nhanVienTableAdapter.Update(this.dS.NhanVien);
+
+                string sp = "EXEC SP_XOALOGIN '" + mANVTextBox.Text + "'";
+                Program.myreader = Program.ExecSqlDataReader(sp);
+                Program.myreader.Read();
+                Program.myreader.Close();
+                return;
+
+            }
         }
 
         private void btndelete_Click(object sender, EventArgs e)
@@ -195,7 +222,7 @@ namespace NganHang
             }
             else
             {
-              
+
                 trangThaiXoaTextBox.Text = "0";
                 bdsNV.EndEdit();
                 this.nhanVienTableAdapter.Update(this.dS.NhanVien);
@@ -223,62 +250,27 @@ namespace NganHang
         }
         private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            groupBox3.Visible = true;
-            groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             groupBox1.Visible = false;
             groupBox2.Visible = false;
-            
+            FormTaoLogin fTLG = new FormTaoLogin();
+            fTLG.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (txtTen.Text.Equals("") || txtPass.Text.Equals(""))
-            {
-                MessageBox.Show("tài khoản hoặc mật khẩu không hợp lệ!");
-            }
-            else
-            {
-                string sqlcmd1 = "DECLARE	@return_value int EXEC @return_value = " +
-                "[dbo].[SP_CHECKLOGIN] @LGNAME = N'"+txtTen.Text.ToString().Trim()+"'SELECT  'Return Value' = @return_value";
-                Program.myreader = Program.ExecSqlDataReader(sqlcmd1);
-                Program.myreader.Read();
-                int value = Program.myreader.GetInt32(0);
-                Program.myreader.Close();
-                if (value == 0)
-                {
-                    MessageBox.Show("Tên đăng nhập đã tồn tại!");
-                }
-                else
-                {
-
-                    string sqlcmd = "exec SP_TAOTAIKHOAN '" + txtTen.Text.ToString().Trim() +
-                    "','" + txtPass.Text.ToString().Trim() + "','" + cbxMa.Text.ToString() + "','" + cbxNh.Text.ToString() + "'";
-                    Program.myreader = Program.ExecSqlDataReader(sqlcmd);
-                    Program.myreader.Read();
-                    Program.myreader.Close();
-                    MessageBox.Show("Thành công!");
-                    groupBox2.Visible = false;
-
-                }
-            }
-        }
+       
 
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             groupBox1.Enabled = true;
             mANVTextBox.Enabled = false;
             mACNTextBox.Enabled = false;
-            btnxoa.Visible = false;
             btnok.Visible = false;
             btnhuy.Visible = true;
             btnEdit.Visible = true;
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            groupBox3.Visible = false;
             groupBox1.Visible = true;
             groupBox2.Visible = true;
-            btnxoa.Visible = false;
             btnEdit.Visible = false;
             btnhuy.Visible = false;
             btnok.Visible = false;
@@ -287,7 +279,7 @@ namespace NganHang
         private void button1_Click_1(object sender, EventArgs e)
         {
             this.bdsNV.EndEdit();
-            
+
         }
 
         private void btnhuy_Click(object sender, EventArgs e)
@@ -298,7 +290,7 @@ namespace NganHang
         private void btnEdit_Click(object sender, EventArgs e)
         {
             this.bdsNV.EndEdit();
-            
+
         }
 
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -312,6 +304,16 @@ namespace NganHang
             //LietKeKhachHang1CN lietke = new LietKeKhachHang1CN();
             //ReportPrintTool pr = new ReportPrintTool(lietke);
             //pr.ShowPreviewDialog();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.bdsNV.CancelEdit();
         }
     }
 }

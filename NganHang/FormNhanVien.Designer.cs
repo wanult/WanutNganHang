@@ -49,7 +49,6 @@
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -81,28 +80,12 @@
             this.mANVTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnxoa = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btnhuy = new System.Windows.Forms.Button();
             this.btnok = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.login = new System.Windows.Forms.Button();
-            this.cbxNh = new System.Windows.Forms.ComboBox();
             this.v_DSNHOMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSLG = new NganHang.DSLG();
-            this.cbxMa = new System.Windows.Forms.ComboBox();
             this.v_DSTKBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.txtTen = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.v_DSTKTableAdapter = new NganHang.DSLGTableAdapters.V_DSTKTableAdapter();
             this.tableAdapterManager1 = new NganHang.DSLGTableAdapters.TableAdapterManager();
             this.v_DSNHOMTableAdapter = new NganHang.DSLGTableAdapters.V_DSNHOMTableAdapter();
@@ -122,14 +105,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.v_DSNHOMBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSLG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.v_DSTKBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mANVLabel
@@ -231,8 +209,7 @@
             this.barButtonItem5,
             this.barButtonItem6,
             this.barButtonItem7,
-            this.barButtonItem8,
-            this.barButtonItem9});
+            this.barButtonItem8});
             this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 9;
             // 
@@ -259,8 +236,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem3, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem5, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem7, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem8, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem9)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem8, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -315,6 +291,7 @@
             this.barButtonItem5.Id = 4;
             this.barButtonItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
             this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
             // 
             // barButtonItem7
             // 
@@ -332,13 +309,6 @@
             this.barButtonItem8.Name = "barButtonItem8";
             this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
-            // barButtonItem9
-            // 
-            this.barButtonItem9.Caption = "barButtonItem9";
-            this.barButtonItem9.Id = 8;
-            this.barButtonItem9.Name = "barButtonItem9";
-            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
-            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
@@ -351,7 +321,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 749);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 606);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(1090, 0);
             // 
@@ -361,7 +331,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 69);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 680);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 537);
             // 
             // barDockControlRight
             // 
@@ -369,11 +339,11 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1090, 69);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 680);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 537);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panel1.Controls.Add(this.comboBoxCN);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -430,13 +400,15 @@
             // 
             // nhanVienGridControl
             // 
+            this.nhanVienGridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.nhanVienGridControl.DataSource = this.bdsNV;
-            this.nhanVienGridControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.nhanVienGridControl.Location = new System.Drawing.Point(0, 109);
             this.nhanVienGridControl.MainView = this.gridView1;
             this.nhanVienGridControl.MenuManager = this.barManager1;
             this.nhanVienGridControl.Name = "nhanVienGridControl";
-            this.nhanVienGridControl.Size = new System.Drawing.Size(1090, 152);
+            this.nhanVienGridControl.Size = new System.Drawing.Size(1090, 251);
             this.nhanVienGridControl.TabIndex = 9;
             this.nhanVienGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -512,7 +484,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox1.Controls.Add(pHAILabel);
             this.groupBox1.Controls.Add(this.pHAIComboBox);
             this.groupBox1.Controls.Add(trangThaiXoaLabel);
@@ -529,10 +503,9 @@
             this.groupBox1.Controls.Add(this.hOTextBox);
             this.groupBox1.Controls.Add(mANVLabel);
             this.groupBox1.Controls.Add(this.mANVTextBox);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(0, 261);
+            this.groupBox1.Location = new System.Drawing.Point(0, 366);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1090, 238);
+            this.groupBox1.Size = new System.Drawing.Size(1090, 194);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             // 
@@ -607,20 +580,20 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnEdit);
-            this.groupBox2.Controls.Add(this.btnxoa);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.btnhuy);
             this.groupBox2.Controls.Add(this.btnok);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 499);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox2.Location = new System.Drawing.Point(0, 546);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1090, 250);
+            this.groupBox2.Size = new System.Drawing.Size(1090, 60);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // btnEdit
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEdit.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnEdit.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Location = new System.Drawing.Point(275, 20);
             this.btnEdit.Name = "btnEdit";
@@ -629,18 +602,6 @@
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnxoa
-            // 
-            this.btnxoa.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnxoa.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnxoa.Location = new System.Drawing.Point(275, 7);
-            this.btnxoa.Name = "btnxoa";
-            this.btnxoa.Size = new System.Drawing.Size(102, 30);
-            this.btnxoa.TabIndex = 21;
-            this.btnxoa.Text = "Xóa";
-            this.btnxoa.UseVisualStyleBackColor = false;
-            this.btnxoa.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // label5
             // 
@@ -653,7 +614,7 @@
             // 
             // btnhuy
             // 
-            this.btnhuy.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnhuy.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnhuy.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnhuy.Location = new System.Drawing.Point(402, 22);
             this.btnhuy.Name = "btnhuy";
@@ -665,7 +626,7 @@
             // 
             // btnok
             // 
-            this.btnok.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnok.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnok.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnok.Location = new System.Drawing.Point(402, 8);
             this.btnok.Name = "btnok";
@@ -674,64 +635,6 @@
             this.btnok.Text = "OK";
             this.btnok.UseVisualStyleBackColor = false;
             this.btnok.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.login);
-            this.groupBox3.Controls.Add(this.cbxNh);
-            this.groupBox3.Controls.Add(this.cbxMa);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.pictureBox4);
-            this.groupBox3.Controls.Add(this.pictureBox3);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.pictureBox2);
-            this.groupBox3.Controls.Add(this.txtPass);
-            this.groupBox3.Controls.Add(this.txtTen);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.pictureBox1);
-            this.groupBox3.Location = new System.Drawing.Point(678, 447);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(400, 290);
-            this.groupBox3.TabIndex = 29;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Visible = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Silver;
-            this.button4.Location = new System.Drawing.Point(262, 238);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 23);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Hủy";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // login
-            // 
-            this.login.BackColor = System.Drawing.Color.Silver;
-            this.login.Location = new System.Drawing.Point(132, 238);
-            this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(75, 23);
-            this.login.TabIndex = 12;
-            this.login.Text = "Tạo";
-            this.login.UseVisualStyleBackColor = false;
-            this.login.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // cbxNh
-            // 
-            this.cbxNh.DataSource = this.v_DSNHOMBindingSource;
-            this.cbxNh.DisplayMember = "name";
-            this.cbxNh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxNh.FormattingEnabled = true;
-            this.cbxNh.Location = new System.Drawing.Point(132, 206);
-            this.cbxNh.Name = "cbxNh";
-            this.cbxNh.Size = new System.Drawing.Size(214, 21);
-            this.cbxNh.TabIndex = 11;
-            this.cbxNh.ValueMember = "name";
             // 
             // v_DSNHOMBindingSource
             // 
@@ -743,116 +646,10 @@
             this.dSLG.DataSetName = "DSLG";
             this.dSLG.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // cbxMa
-            // 
-            this.cbxMa.DataSource = this.v_DSTKBindingSource;
-            this.cbxMa.DisplayMember = "MANV";
-            this.cbxMa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxMa.FormattingEnabled = true;
-            this.cbxMa.Location = new System.Drawing.Point(132, 150);
-            this.cbxMa.Name = "cbxMa";
-            this.cbxMa.Size = new System.Drawing.Size(214, 21);
-            this.cbxMa.TabIndex = 10;
-            this.cbxMa.ValueMember = "MANV";
-            // 
             // v_DSTKBindingSource
             // 
             this.v_DSTKBindingSource.DataMember = "V_DSTK";
             this.v_DSTKBindingSource.DataSource = this.dSLG;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(42, 238);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 14);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Nhóm Quyền";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(61, 197);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(55, 139);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(32, 178);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 14);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Mã Nhân Viên";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(42, 123);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 14);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Mật Khẩu";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(55, 85);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // txtPass
-            // 
-            this.txtPass.Location = new System.Drawing.Point(132, 96);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(214, 21);
-            this.txtPass.TabIndex = 3;
-            // 
-            // txtTen
-            // 
-            this.txtTen.Location = new System.Drawing.Point(132, 31);
-            this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(214, 21);
-            this.txtTen.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 14);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tên Đăng Nhập";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(55, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // v_DSTKTableAdapter
             // 
@@ -872,8 +669,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1090, 749);
-            this.Controls.Add(this.groupBox3);
+            this.ClientSize = new System.Drawing.Size(1090, 606);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.nhanVienGridControl);
@@ -883,7 +679,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FormNhanVien";
-            this.Text = "FormNhanVien";
+            this.Text = "Quản lý nhân viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
@@ -897,15 +693,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.v_DSNHOMBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSLG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.v_DSTKBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -954,32 +744,15 @@
         private System.Windows.Forms.Button btnhuy;
         private System.Windows.Forms.Button btnok;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnxoa;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.TextBox txtTen;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private DSLG dSLG;
         private System.Windows.Forms.BindingSource v_DSTKBindingSource;
         private DSLGTableAdapters.V_DSTKTableAdapter v_DSTKTableAdapter;
         private DSLGTableAdapters.TableAdapterManager tableAdapterManager1;
-        private System.Windows.Forms.ComboBox cbxMa;
         private System.Windows.Forms.BindingSource v_DSNHOMBindingSource;
         private DSLGTableAdapters.V_DSNHOMTableAdapter v_DSNHOMTableAdapter;
-        private System.Windows.Forms.ComboBox cbxNh;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button login;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
     }
 }

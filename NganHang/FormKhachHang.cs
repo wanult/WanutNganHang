@@ -58,7 +58,6 @@ namespace NganHang
             sotkkh.Visible = true;
             sotktbx.Visible = false;
             sodutk.Visible = false;
-            btnxoaa.Visible = false;
             btnsuaa.Visible = false;
             btnhuyy.Visible = false;
             btnokk.Visible = false;
@@ -85,79 +84,15 @@ namespace NganHang
             macntbx.Enabled = false;
             btnhuyy.Visible = false;
             btnsuaa.Visible = false;
-            btnxoaa.Visible = false;
             btnokk.Visible = true;
         }
 
         private void btnxoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            btnxoaa.Visible = true;
             btnsuaa.Visible = false;
             btnokk.Visible = false;
             btnhuyy.Visible = false;
             groupBox1.Enabled = false;
-        }
-
-        private void cbxCN_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (this.cbxCN.ValueMember != "")
-            {
-                if (Program.server != this.cbxCN.SelectedValue.ToString())
-                {
-                    Program.server = this.cbxCN.SelectedValue.ToString();
-
-                }
-                if (this.cbxCN.SelectedIndex != Program.mChinhanh)
-                {
-                    Program.loginHienTai = Program.remoteLogin;
-                    Program.passHienTai = Program.remotePassword;
-                }
-                else
-                {
-                    Program.loginHienTai = Program.loginName;
-                    Program.passHienTai = Program.passWord;
-                }
-                if (Program.KetNoi() == 0)
-                {
-                    MessageBox.Show("Không thể kết nối", "Lỗi kết nối", MessageBoxButtons.OK);
-                    return;
-                }
-                else
-                {
-                    this.khachHangTableAdapter.Connection.ConnectionString = Program.connectionString;
-                    this.khachHangTableAdapter.Fill(this.dS.KhachHang);
-
-                    //this.v_DSTKTableAdapter.Connection.ConnectionString = Program.connectionString;
-                    //this.v_DSTKTableAdapter.Fill(this.dSLG.V_DSTK);
-
-                }
-            }
-        }
-
-        private void btnsua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            groupBox1.Enabled = true;
-            sotkkh.Visible = true;
-            sodutkkh.Visible = true;
-            sotktbx.Visible = false;
-            sodutk.Visible = false;
-            macntbx.Enabled = false;
-            cmndtbx.Enabled = false;
-            btnxoaa.Visible = false;
-            btnokk.Visible = false;
-            btnhuyy.Visible = true;
-            btnsuaa.Visible = true;
-        }
-
-        private void btnluu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            this.khachHangTableAdapter.Update(this.dS.KhachHang);
-            this.taiKhoanTableAdapter.Update(this.dS.TaiKhoan);
-
-        }
-
-        private void btnxoaa_Click(object sender, EventArgs e)
-        {
             DialogResult dialogResult = MessageBox.Show("Ban co chac xoa khach hang nay khong?", "Thong bao", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.No)
             {
@@ -176,6 +111,71 @@ namespace NganHang
 
 
             }
+        }
+
+        private void cbxCN_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.cbxCN.ValueMember != "")
+                {
+                    if (Program.server != this.cbxCN.SelectedValue.ToString())
+                    {
+                        Program.server = this.cbxCN.SelectedValue.ToString();
+
+                    }
+                    if (this.cbxCN.SelectedIndex != Program.mChinhanh)
+                    {
+                        Program.loginHienTai = Program.remoteLogin;
+                        Program.passHienTai = Program.remotePassword;
+                    }
+                    else
+                    {
+                        Program.loginHienTai = Program.loginName;
+                        Program.passHienTai = Program.passWord;
+                    }
+                    if (Program.KetNoi() == 0)
+                    {
+                        MessageBox.Show("Không thể kết nối", "Lỗi kết nối", MessageBoxButtons.OK);
+                        return;
+                    }
+                    else
+                    {
+                        this.khachHangTableAdapter.Connection.ConnectionString = Program.connectionString;
+                        this.khachHangTableAdapter.Fill(this.dS.KhachHang);
+
+                        //this.v_DSTKTableAdapter.Connection.ConnectionString = Program.connectionString;
+                        //this.v_DSTKTableAdapter.Fill(this.dSLG.V_DSTK);
+
+                    }
+                }
+            }
+            catch (NullReferenceException)
+            {
+
+            }
+            
+        }
+
+        private void btnsua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            groupBox1.Enabled = true;
+            sotkkh.Visible = true;
+            sodutkkh.Visible = true;
+            sotktbx.Visible = false;
+            sodutk.Visible = false;
+            macntbx.Enabled = false;
+            cmndtbx.Enabled = false;
+            btnokk.Visible = false;
+            btnhuyy.Visible = true;
+            btnsuaa.Visible = true;
+        }
+
+        private void btnluu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.khachHangTableAdapter.Update(this.dS.KhachHang);
+            this.taiKhoanTableAdapter.Update(this.dS.TaiKhoan);
+
         }
 
         private void btnsuaa_Click(object sender, EventArgs e)
@@ -212,6 +212,20 @@ namespace NganHang
             formTaoTK.Chinhanh = macntk.Text;
         }
 
-        
+        private void btrefresh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            this.khachHangTableAdapter.Fill(this.dS.KhachHang);
+            this.taiKhoanTableAdapter.Fill(this.dS.TaiKhoan);
+            btnsuaa.Visible = false;
+            btnhuyy.Visible = false;
+            btnokk.Visible = false;
+            groupBox1.Enabled = false;
+        }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.bdsKH.CancelEdit();
+        }
     }
 }

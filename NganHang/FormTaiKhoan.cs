@@ -19,34 +19,39 @@ namespace NganHang
 
         private void cbxCNTK_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (this.cbxCNTK.ValueMember != "")
+            try
             {
-                if (Program.server != this.cbxCNTK.SelectedValue.ToString())
+                if (this.cbxCNTK.ValueMember != "")
                 {
-                    Program.server = this.cbxCNTK.SelectedValue.ToString();
+                    if (Program.server != this.cbxCNTK.SelectedValue.ToString())
+                    {
+                        Program.server = this.cbxCNTK.SelectedValue.ToString();
 
-                }
-                if (this.cbxCNTK.SelectedIndex != Program.mChinhanh)
-                {
-                    Program.loginHienTai = Program.remoteLogin;
-                    Program.passHienTai = Program.remotePassword;
-                }
-                else
-                {
-                    Program.loginHienTai = Program.loginName;
-                    Program.passHienTai = Program.passWord;
-                }
-                if (Program.KetNoi() == 0)
-                {
-                    MessageBox.Show("Không thể kết nối", "Lỗi kết nối", MessageBoxButtons.OK);
-                    return;
-                }
-                else
-                {
-                    this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connectionString;
-                    this.taiKhoanTableAdapter.Fill(this.dS.TaiKhoan);
+                    }
+                    if (this.cbxCNTK.SelectedIndex != Program.mChinhanh)
+                    {
+                        Program.loginHienTai = Program.remoteLogin;
+                        Program.passHienTai = Program.remotePassword;
+                    }
+                    else
+                    {
+                        Program.loginHienTai = Program.loginName;
+                        Program.passHienTai = Program.passWord;
+                    }
+                    if (Program.KetNoi() == 0)
+                    {
+                        MessageBox.Show("Không thể kết nối", "Lỗi kết nối", MessageBoxButtons.OK);
+                        return;
+                    }
+                    else
+                    {
+                        this.taiKhoanTableAdapter.Connection.ConnectionString = Program.connectionString;
+                        this.taiKhoanTableAdapter.Fill(this.dS.TaiKhoan);
+                    }
                 }
             }
+            catch (NullReferenceException) { }
+
         }
 
         private void taiKhoanBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -80,8 +85,9 @@ namespace NganHang
             {
                 cbxCNTK.Enabled = false;
             }
+            groupBoxTK.Enabled = false;
         }
 
-       
+
     }
 }

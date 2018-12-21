@@ -42,6 +42,7 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbgui1 = new System.Windows.Forms.Label();
             this.bthuy = new System.Windows.Forms.Button();
             this.btOK = new System.Windows.Forms.Button();
             this.ktnhan = new System.Windows.Forms.Button();
@@ -55,7 +56,6 @@
             this.lbtien = new System.Windows.Forms.Label();
             this.lbgui = new System.Windows.Forms.Label();
             this.lbnhan = new System.Windows.Forms.Label();
-            this.lbgui1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picnhan)).BeginInit();
@@ -98,6 +98,7 @@
             this.guitien.Caption = "Gửi tiền";
             this.guitien.Id = 0;
             this.guitien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("guitien.ImageOptions.Image")));
+            this.guitien.ImageOptions.LargeImage = global::NganHang.Properties.Resources.pigpng;
             this.guitien.Name = "guitien";
             this.guitien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
@@ -135,15 +136,15 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(800, 63);
+            this.barDockControlTop.Size = new System.Drawing.Size(683, 63);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 427);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 411);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(800, 23);
+            this.barDockControlBottom.Size = new System.Drawing.Size(683, 23);
             // 
             // barDockControlLeft
             // 
@@ -151,15 +152,15 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 63);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 364);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 348);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(800, 63);
+            this.barDockControlRight.Location = new System.Drawing.Point(683, 63);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 364);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 348);
             // 
             // barButtonItem1
             // 
@@ -186,14 +187,24 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 63);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(800, 300);
+            this.groupBox1.Size = new System.Drawing.Size(683, 330);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
+            // 
+            // lbgui1
+            // 
+            this.lbgui1.AutoSize = true;
+            this.lbgui1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbgui1.Location = new System.Drawing.Point(222, 58);
+            this.lbgui1.Name = "lbgui1";
+            this.lbgui1.Size = new System.Drawing.Size(52, 16);
+            this.lbgui1.TabIndex = 13;
+            this.lbgui1.Text = "TK Gửi";
             // 
             // bthuy
             // 
             this.bthuy.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bthuy.Location = new System.Drawing.Point(394, 245);
+            this.bthuy.Location = new System.Drawing.Point(384, 245);
             this.bthuy.Name = "bthuy";
             this.bthuy.Size = new System.Drawing.Size(75, 23);
             this.bthuy.TabIndex = 12;
@@ -204,7 +215,7 @@
             // btOK
             // 
             this.btOK.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btOK.Location = new System.Drawing.Point(244, 245);
+            this.btOK.Location = new System.Drawing.Point(283, 245);
             this.btOK.Name = "btOK";
             this.btOK.Size = new System.Drawing.Size(75, 23);
             this.btOK.TabIndex = 11;
@@ -215,9 +226,9 @@
             // ktnhan
             // 
             this.ktnhan.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ktnhan.Location = new System.Drawing.Point(394, 181);
+            this.ktnhan.Location = new System.Drawing.Point(475, 186);
             this.ktnhan.Name = "ktnhan";
-            this.ktnhan.Size = new System.Drawing.Size(75, 23);
+            this.ktnhan.Size = new System.Drawing.Size(75, 22);
             this.ktnhan.TabIndex = 10;
             this.ktnhan.Text = "Kiểm tra";
             this.ktnhan.UseVisualStyleBackColor = true;
@@ -226,7 +237,7 @@
             // ktrut
             // 
             this.ktrut.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ktrut.Location = new System.Drawing.Point(394, 55);
+            this.ktrut.Location = new System.Drawing.Point(475, 55);
             this.ktrut.Name = "ktrut";
             this.ktrut.Size = new System.Drawing.Size(75, 23);
             this.ktrut.TabIndex = 9;
@@ -237,7 +248,8 @@
             // picnhan
             // 
             this.picnhan.Image = ((System.Drawing.Image)(resources.GetObject("picnhan.Image")));
-            this.picnhan.Location = new System.Drawing.Point(50, 170);
+            this.picnhan.Location = new System.Drawing.Point(107, 182);
+            this.picnhan.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.picnhan.Name = "picnhan";
             this.picnhan.Size = new System.Drawing.Size(100, 50);
             this.picnhan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -247,7 +259,8 @@
             // pictien
             // 
             this.pictien.Image = ((System.Drawing.Image)(resources.GetObject("pictien.Image")));
-            this.pictien.Location = new System.Drawing.Point(50, 91);
+            this.pictien.Location = new System.Drawing.Point(107, 109);
+            this.pictien.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.pictien.Name = "pictien";
             this.pictien.Size = new System.Drawing.Size(100, 50);
             this.pictien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -257,7 +270,8 @@
             // picrut
             // 
             this.picrut.Image = ((System.Drawing.Image)(resources.GetObject("picrut.Image")));
-            this.picrut.Location = new System.Drawing.Point(50, 27);
+            this.picrut.Location = new System.Drawing.Point(107, 35);
+            this.picrut.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.picrut.Name = "picrut";
             this.picrut.Size = new System.Drawing.Size(100, 51);
             this.picrut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -267,32 +281,32 @@
             // tbtien
             // 
             this.tbtien.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbtien.Location = new System.Drawing.Point(244, 118);
+            this.tbtien.Location = new System.Drawing.Point(283, 118);
             this.tbtien.Name = "tbtien";
-            this.tbtien.Size = new System.Drawing.Size(129, 22);
+            this.tbtien.Size = new System.Drawing.Size(186, 22);
             this.tbtien.TabIndex = 5;
             // 
             // tbrut
             // 
             this.tbrut.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbrut.Location = new System.Drawing.Point(244, 55);
+            this.tbrut.Location = new System.Drawing.Point(283, 55);
             this.tbrut.Name = "tbrut";
-            this.tbrut.Size = new System.Drawing.Size(129, 22);
+            this.tbrut.Size = new System.Drawing.Size(186, 22);
             this.tbrut.TabIndex = 4;
             // 
             // tbnhan
             // 
             this.tbnhan.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbnhan.Location = new System.Drawing.Point(244, 186);
+            this.tbnhan.Location = new System.Drawing.Point(283, 186);
             this.tbnhan.Name = "tbnhan";
-            this.tbnhan.Size = new System.Drawing.Size(129, 22);
+            this.tbnhan.Size = new System.Drawing.Size(186, 22);
             this.tbnhan.TabIndex = 3;
             // 
             // lbtien
             // 
             this.lbtien.AutoSize = true;
             this.lbtien.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbtien.Location = new System.Drawing.Point(163, 121);
+            this.lbtien.Location = new System.Drawing.Point(221, 121);
             this.lbtien.Name = "lbtien";
             this.lbtien.Size = new System.Drawing.Size(53, 16);
             this.lbtien.TabIndex = 2;
@@ -302,7 +316,7 @@
             // 
             this.lbgui.AutoSize = true;
             this.lbgui.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbgui.Location = new System.Drawing.Point(163, 58);
+            this.lbgui.Location = new System.Drawing.Point(224, 58);
             this.lbgui.Name = "lbgui";
             this.lbgui.Size = new System.Drawing.Size(50, 16);
             this.lbgui.TabIndex = 1;
@@ -312,34 +326,24 @@
             // 
             this.lbnhan.AutoSize = true;
             this.lbnhan.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbnhan.Location = new System.Drawing.Point(163, 189);
+            this.lbnhan.Location = new System.Drawing.Point(212, 189);
             this.lbnhan.Name = "lbnhan";
             this.lbnhan.Size = new System.Drawing.Size(62, 16);
             this.lbnhan.TabIndex = 0;
             this.lbnhan.Text = "TK Nhận";
             // 
-            // lbgui1
-            // 
-            this.lbgui1.AutoSize = true;
-            this.lbgui1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbgui1.Location = new System.Drawing.Point(164, 61);
-            this.lbgui1.Name = "lbgui1";
-            this.lbgui1.Size = new System.Drawing.Size(52, 16);
-            this.lbgui1.TabIndex = 13;
-            this.lbgui1.Text = "TK Gửi";
-            // 
             // FormGiaoDich
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(683, 434);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FormGiaoDich";
-            this.Text = "FormGiaoDich";
+            this.Text = "Quản lý giao dịch";
             this.Load += new System.EventHandler(this.FormGiaoDich_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.groupBox1.ResumeLayout(false);
